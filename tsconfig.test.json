@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "**/__tests__/**/*.ts",
+    "src/**/*.{spec|test}.ts",
+    "**/@types/**/*.d.ts"
+  ],
+  "compilerOptions": {
+    "strict": false,
+    "types": ["jest"],
+    "sourceMap": true,
+    "removeComments": false,
+  }
+}
