@@ -1,0 +1,25 @@
+# Dependency directory and npm log
+node_modules
+npm-debug.log
+tmp
+
+# Code coverage results
+/coverage
+coverage*
+
+# Project files
+.tern-port
+.tern-project
+.idea
+*.iml
+.vscode
+
+# OS X
+.DS_Store
+
+# vim
+*.swp
+*.swo
+
+# eslint
+.eslintcache
