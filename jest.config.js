@@ -14,7 +14,7 @@ module.exports = {
       tsconfig: './tsconfig.test.json',
     },
   },
-  testRegex: ['.test.ts$'],
+  testRegex: ['.(test|e2e).ts$'],
   clearMocks: true,
   coverageThreshold: {
     './src/**/*.ts': {
