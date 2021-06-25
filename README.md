@@ -14,6 +14,21 @@ Arguments:
   - `transformArrayNegativeIndex?: boolean` (default `true`): Allow and parse negative indexes
     correctly
 
+Example:
+
+```TypeScript
+import { resolveExpression } from 'aircall-expression-parser'
+
+const template = 'Start: ${variable.start}, End ${variable.end}'
+const context = {
+  start: '09:00',
+  end: '12:00',
+}
+
+resolveExpression(template, context);
+// returns 'Start: 09:00, End 12:00'
+```
+
 ### Default expression handling
 
 Default expressions come in the form of `${<JavaScript code to evaluate>}`. The templates are
