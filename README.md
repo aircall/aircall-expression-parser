@@ -29,6 +29,8 @@ resolveExpression(template, context);
 // returns 'Start: 09:00, End 12:00'
 ```
 
+There are some use cases in the [E2E tests](src/__tests__/e2e/parser.e2e.ts)
+
 ### Default expression handling
 
 Default expressions come in the form of `${<JavaScript code to evaluate>}`. The templates are
