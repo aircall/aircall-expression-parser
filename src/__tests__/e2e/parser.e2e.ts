@@ -433,6 +433,14 @@ describe('Parser E2E Test Suite', () => {
 
     it('should throw an error if you do an unsafe operation', () => {
       expect(() => resolveExpression('${() => {require("fs").deleteSync(".")}}')).toThrow();
+      expect(() =>
+        (resolveExpression('${() => {global.testVariableToCheck = "unsafe"}') as Function).call(
+          this,
+        ),
+      ).toThrow();
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      expect(() => testVariableToCheck).toThrow();
     });
 
     it('should support multiple lines inside the expression', () => {
