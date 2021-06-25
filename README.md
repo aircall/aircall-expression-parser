@@ -1,6 +1,6 @@
 # aircall-expression-parser
 
-Resolves templated expressions.
+Resolves templated expressions in a secure local scope.
 
 ## `resolveExpression` function
 
