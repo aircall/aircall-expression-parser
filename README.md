@@ -1,4 +1,4 @@
-# @aircall/expression-parser
+# aircall-expression-parser
 
 Resolves templated expressions.
 
