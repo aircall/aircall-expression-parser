@@ -1,6 +1,6 @@
 {
   "name": "@aircall/expression-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Transforms strings with escaping expression templates, evaluating the expressions and returning a new string or the value evaluated from the expression",
   "scripts": {
     "prepare": "bash ./.huskyrc.sh && husky install",
@@ -9,10 +9,17 @@
     "linter": "eslint --fix src __mocks__",
     "build": "tsc --project tsconfig.local.json"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aircall/aircall-expression-parser"
+  },
   "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Aircall",
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "dependencies": {
     "js-x-ray": "^3.2.0"

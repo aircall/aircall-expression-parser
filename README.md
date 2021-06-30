@@ -1,4 +1,4 @@
-# aircall-expression-parser
+# expression-parser
 
 Resolves templated expressions in a secure local scope.
 
@@ -17,7 +17,7 @@ Arguments:
 Example:
 
 ```TypeScript
-import { resolveExpression } from 'aircall-expression-parser'
+import { resolveExpression } from '@aircall/expression-parser'
 
 const template = 'Start: ${variable.start}, End ${variable.end}'
 const context = {
