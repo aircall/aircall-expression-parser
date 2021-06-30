@@ -9,6 +9,7 @@
     "linter": "eslint --fix src __mocks__",
     "build": "tsc --project tsconfig.local.json"
   },
+  "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Aircall",
