@@ -28,7 +28,8 @@ function replaceNegativeIndexes(str: string): string {
  * Pass the context to empty functions
  */
 function replaceEmptyFnToReceiveContext(str: string): string {
-  const emptyFnRegEx = /((\w|_|\$)+(\w|\d|\$|_|[|]|\(|\))*)\(\)/g;
+  const emptyFnRegEx = /([\w_$][\w\d$_|()]*)\(\)/g;
+
   return str.replace(emptyFnRegEx, '$1(this)');
 }
 
