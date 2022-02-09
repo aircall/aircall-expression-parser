@@ -27,8 +27,8 @@ function compile<Context, T>(
     } catch (err) {
       // support access to undefined object fields
       if (
-        (err.name === 'TypeError' && err.message.match(/^Cannot read property.+of undefined$/)) ||
-        (err.name === 'ReferenceError' && err.message.match(/^.+ is not defined$/))
+        (err.name === 'TypeError' && err.message.match(/^Cannot read propert.+of undefined/)) ||
+        (err.name === 'ReferenceError' && err.message.match(/^.+ is not defined/))
       ) {
         return undefined;
       }
