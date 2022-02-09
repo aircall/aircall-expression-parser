@@ -42,5 +42,18 @@ describe('Transforms Test Suite', () => {
 
       expect(prepareStr(test, {})).toBe(test);
     });
+
+    it('should not do catastrophic backtracking with a complicated string', () => {
+      const test = Array(100).fill('_________________').join('/');
+      const start = Date.now();
+      prepareStr(test, { passContextToEmptyFunctions: true });
+      const end = Date.now();
+
+      // reference values on a Ryzen 5 2600X
+      // old: ~10s
+      // optimized: 0.1ms
+      console.log(end - start);
+      expect(end - start).toBeLessThan(50);
+    });
   });
 });
